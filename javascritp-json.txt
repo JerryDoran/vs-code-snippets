@@ -1,0 +1,58 @@
+"Get Element By Id": {
+		"prefix": "getid",
+		"body": "const $el = document.getElementById('$el');",
+		"description": "Get DOM element by id"
+	},
+	"Named Function": {
+		"prefix": "nfn",
+		"body": [
+			"function ${1:functionName}($2) {",
+			"  $3",
+			"}"
+		],
+		"description": "Named Function"
+	},
+	"Arrow Function": {
+		"prefix": "arr",
+		"body": [
+			"const ${1:functionName} = ($2) => {",
+			"  $3",
+			"}"
+		],
+		"description": "Arrow Function"
+	},
+  "Array Method": {
+  "prefix": "arm",
+  "body": [
+    "${1|forEach,map,filter,reduce,some|}((${2:item}) => {",
+    "  $3",
+    "})"
+  ],
+  "description": "Array Method"
+},
+"Axios": {
+  "prefix": "axreq",
+  "body": [
+    "axios.${1|get,post,put,delete|}('${2:url}')",
+    "  .then(res => console.log(res.data))",
+    "  .catch(err => console.log(err));"
+  ],
+  "description": "Axios"
+},
+"Express Server": {
+  "prefix": "expsrv",
+  "body": [
+    "const express = require('express');",
+    "",
+    "const app = express();",
+    "",
+    "app.${1|get,post,put,delete|}('${2:route}', (req, res) => {",
+    "  $3",
+    "});",
+    "",
+    "const PORT = process.env.PORT || ${4|3000,5000,8000,8080|};",
+    "",
+    "app.listen(PORT, () => console.log(`Server running on port \\${PORT}`));"
+  ],
+  "description": "Express Server"
+}
