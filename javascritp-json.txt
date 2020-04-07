@@ -1,3 +1,5 @@
+Generate code snippets at "https://snippet-generator.app/"
+
 "Get Element By Id": {
 		"prefix": "getid",
 		"body": "const $el = document.getElementById('$el');",
